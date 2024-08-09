@@ -1,0 +1,66 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (C) 2022 Posit Software, PBC. All rights reserved.
+ *  Licensed under the Elastic License 2.0. See LICENSE.txt for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+@keyframes positronActionBarFilter-fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+.action-bar-filter-container {
+	display: flex;
+	align-items: center;
+}
+
+.action-bar-filter-input {
+	width: 100%;
+	display: flex;
+	border-radius: 4px;
+	margin-right: 2px;
+	align-items: center;
+	font-size: 12px;
+	background: var(--positronActionBar-textInputBackground);
+	border: 1px solid var(--positronActionBar-textInputBorder);
+}
+
+.action-bar-filter-input.focused {
+	border: 1px solid var(--vscode-focusBorder);
+}
+
+.action-bar-filter-input .text-input {
+	width: 100%;
+	padding: 4px 8px;
+	border-radius: 4px;
+	border: none !important;
+	box-sizing: border-box;
+	background: transparent;
+	outline: none !important;
+}
+
+.action-bar-filter-input .text-input::placeholder {
+	opacity: 0.5;
+	color: var(--positronActionBar-foreground);
+}
+
+.action-bar-filter-input .text-input::selection {
+	color: var(--positronActionBar-textInputSelectionForeground);
+	background: var(--positronActionBar-textInputSelectionBackground);
+}
+
+.action-bar-filter-input .clear-button {
+	padding: 0;
+	width: 16px;
+	height: 16px;
+	border: none;
+	display: flex;
+	cursor: pointer;
+	margin: 0 4px 0 0;
+	background: transparent;
+	animation: positronActionBarFilter-fadeIn 150ms ease-out;
+}
+
+.action-bar-filter-input .clear-button:focus-visible {
+	border-radius: 3px;
+	outline: 1px solid var(--vscode-focusBorder);
+}

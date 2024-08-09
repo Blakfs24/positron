@@ -1,0 +1,55 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (C) 2022 Posit Software, PBC. All rights reserved.
+ *  Licensed under the Elastic License 2.0. See LICENSE.txt for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+import { useEffect, useState } from 'react';
+import { DisposableStore } from 'vs/base/common/lifecycle';
+import { IWorkspaceContextService, IWorkspaceFolder } from 'vs/platform/workspace/common/workspace';
+import { PositronTopActionBarServices } from 'vs/workbench/browser/parts/positronTopActionBar/positronTopActionBar';
+
+/**
+ * The Positron top action bar state.
+ */
+export interface PositronTopActionBarState extends PositronTopActionBarServices {
+	workspaceFolder?: IWorkspaceFolder;
+}
+
+const singleWorkspaceFolder = (workspaceContextService: IWorkspaceContextService) => {
+	const folders = workspaceContextService.getWorkspace().folders;
+	if (folders.length) {
+		return folders[0];
+	} else {
+		return undefined;
+	}
+};
+
+/**
+ * The usePositronTopActionBarState custom hook.
+ * @param services A PositronTopActionBarServices that contains the Positron top action bar services.
+ * @returns The hook.
+ */
+export const usePositronTopActionBarState = (services: PositronTopActionBarServices): PositronTopActionBarState => {
+	// Hooks.
+	const [workspaceFolder, setWorkspaceFolder] = useState<IWorkspaceFolder | undefined>(singleWorkspaceFolder(services.workspaceContextService));
+
+	// Add event handlers.
+	useEffect(() => {
+		// Create a disposable store for the event handlers we'll add.
+		const disposableStore = new DisposableStore();
+
+		// Add the onDidChangeWorkspaceFolders event handler.
+		disposableStore.add(services.workspaceContextService.onDidChangeWorkspaceFolders(e => {
+			setWorkspaceFolder(singleWorkspaceFolder(services.workspaceContextService));
+		}));
+
+		// Return the clean up for our event handlers.
+		return () => disposableStore.dispose();
+	}, []);
+
+	// Return the Positron top action bar state.
+	return {
+		...services,
+		workspaceFolder
+	};
+};

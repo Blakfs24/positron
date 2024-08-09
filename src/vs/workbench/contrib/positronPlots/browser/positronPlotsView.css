@@ -1,0 +1,24 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (C) 2022 Posit Software, PBC. All rights reserved.
+ *  Licensed under the Elastic License 2.0. See LICENSE.txt for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.positron-plots-container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.positron-plots-container .plots-action-bars-container {
+	height: min-content;
+}
+
+.positron-plots-container .plots-data-container {
+	flex-grow: 1;
+}
+
+.positron-plots {
+	text-align: center;
+	font-style: italic;
+	margin-top: 20px;
+}

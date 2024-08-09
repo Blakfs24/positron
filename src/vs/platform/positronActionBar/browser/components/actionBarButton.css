@@ -1,0 +1,96 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (C) 2022 Posit Software, PBC. All rights reserved.
+ *  Licensed under the Elastic License 2.0. See LICENSE.txt for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+@keyframes positronActionBarButton-fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.action-bar-button {
+	height: 28px;
+	padding: 0;
+	border: none;
+	display: flex;
+	cursor: pointer;
+	overflow: visible;
+	border-radius: 6px;
+	box-sizing: border-box;
+	background: transparent;
+	color: var(--positronActionBar-foreground);
+}
+
+.action-bar-button:hover {
+	background: var(--positronActionBar-hoverBackground);
+}
+
+.action-bar-button.border {
+	border: 1px solid var(--vscode-positronTopActionBar-selectBorder);
+}
+
+.action-bar-button.fade-in {
+	opacity: 0;
+	animation: positronActionBarButton-fadeIn 0.25s ease-in 0.25s 1 forwards;
+}
+
+.action-bar-button:focus {
+	outline: none !important;
+}
+
+.action-bar-button:focus-visible {
+	border-radius: 6px;
+	outline: 1px solid var(--vscode-focusBorder) !important;
+}
+
+.action-bar-button-face {
+	display: flex;
+	align-items: center;
+}
+
+.action-bar-button-text {
+	margin-right: 4px;
+	display: flex;
+	font-size: 12px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.action-bar-button-icon {
+	align-items: center;
+	justify-content: center;
+	display: flex !important;
+	width: var(--positronActionBar-iconSize);
+	height: var(--positronActionBar-iconSize);
+}
+
+.action-bar-button-icon::before {
+	color: var(--positronActionBar-foreground);
+}
+
+.disabled .action-bar-button-icon::before {
+	color: var(--positronActionBar-disabledForeground);
+}
+
+.action-bar-button-drop-down-arrow {
+	width: 10px;
+	align-items: center;
+	justify-content: left;
+	font-size: 18px !important;
+	display: flex !important;
+	height: var(--positronActionBar-iconSize);
+}
+
+.action-bar-button-drop-down-arrow::before {
+	color: var(--positronActionBar-foreground);
+}
+
+.disabled .action-bar-button-drop-down-arrow::before {
+	color: var(--positronActionBar-disabledForeground);
+}

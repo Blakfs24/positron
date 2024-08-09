@@ -1,0 +1,12 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (C) 2023 Posit Software, PBC. All rights reserved.
+ *  Licensed under the Elastic License 2.0. See LICENSE.txt for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.runtime-trace {
+	font-size: 10px;
+	padding: 4px 4px;
+	margin: 2px 0 2px 0;
+	line-height: normal;
+	background: var(--vscode-positronConsole-traceBackground);
+}

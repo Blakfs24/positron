@@ -1,0 +1,81 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (C) 2023-2024 Posit Software, PBC. All rights reserved.
+ *  Licensed under the Elastic License 2.0. See LICENSE.txt for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.data-grid-row-header {
+	left: 0;
+	right: 0;
+	display: grid;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	grid-template-rows: [content] 1fr [splitter] 1px [end];
+	grid-template-columns: [content] 1fr [splitter] 1px [end];
+	background-color: var(--vscode-positronDataGrid-contrastBackground);
+}
+
+.data-grid-row-header
+.border-overlay {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	box-sizing: border-box;
+	border-right: 1px solid var(--vscode-positronDataGrid-border);
+	border-bottom: 1px solid var(--vscode-positronDataGrid-border);
+}
+
+.data-grid-row-header
+.selection-overlay {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	box-sizing: border-box;
+	background-color: var(--vscode-positronDataGrid-selectionBackground);
+	border-left: 1px solid var(--vscode-positronDataGrid-selectionBorder);
+	border-right: 1px solid var(--vscode-positronDataGrid-selectionInnerBorder);
+}
+
+.data-grid-row-header
+.selection-overlay:not(.focused) {
+	opacity: 50%;
+}
+
+.data-grid-row-header
+.selection-overlay.selected-top {
+	border-top: 1px solid var(--vscode-positronDataGrid-selectionBorder);
+}
+
+.data-grid-row-header
+.selection-overlay.selected-bottom {
+	border-bottom: 1px solid var(--vscode-positronDataGrid-selectionBorder);
+}
+
+.data-grid-row-header
+.selection-overlay:not(.selected-bottom) {
+	border-bottom: 1px solid var(--vscode-positronDataGrid-selectionInnerBorder);
+}
+
+.data-grid-row-header
+.content {
+	overflow: hidden;
+	position: relative;
+	grid-row: content / splitter;
+	grid-column: content / splitter;
+}
+
+.data-grid-row-header
+.vertical-splitter {
+	grid-row: content / end;
+	grid-column: splitter / end;
+}
+
+.data-grid-row-header
+.horizontal-splitter {
+	grid-row: splitter / end;
+	grid-column: content / end;
+}

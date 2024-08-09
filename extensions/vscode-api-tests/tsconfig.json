@@ -1,0 +1,18 @@
+{
+	"extends": "../tsconfig.base.json",
+	"compilerOptions": {
+		"outDir": "./out",
+		"types": [
+			"node"
+		]
+	},
+	"include": [
+		"src/**/*",
+		"../../src/vscode-dts/vscode.d.ts",
+		// --- Start Positron ---
+		// Add positron.d.ts.
+		"../../src/vscode-dts/vscode.proposed.*.d.ts",
+		"../../src/positron-dts/positron.d.ts",
+		// --- End Positron ---
+	]
+}

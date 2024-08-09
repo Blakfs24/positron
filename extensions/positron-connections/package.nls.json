@@ -1,0 +1,16 @@
+{
+	"displayName": "Positron Connections",
+	"description": "Provides a view of active database connections.",
+	"view.description": "Database Connections",
+	"view.title": "Connections",
+	"view.welcome": "No database connections are currently active.",
+	"commands.previewTable.title": "Preview Table",
+	"commands.previewTable.category": "Connections",
+	"commands.closeConnection.title": "Close Connection",
+	"commands.refresh.title": "Refresh connection",
+	"commands.removeFromHistory.title": "Remove connection from history",
+	"commands.reopenConnection.title": "Execute connection code in the console",
+	"commands.copyCodeToClipboard.title": "Copy connection code to clipboard",
+	"commands.clearConnectionsHistory.title": "Clear connections history",
+	"commands.expandAll.title": "Connections: Expand All"
+}

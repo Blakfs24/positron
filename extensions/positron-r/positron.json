@@ -1,0 +1,32 @@
+{
+	"binaries": [
+		{
+			"from": "resources/branding/r-icon.svg",
+			"to": "resources/branding"
+		},
+		{
+			"from": "resources/scripts/startup.R",
+			"to": "resources/scripts"
+		},
+		{
+			"from": "resources/js/htmlwidget.js",
+			"to": "resources/js"
+		},
+		{
+			"from": "resources/testing/tree-sitter-r.wasm",
+			"to": "resources/testing"
+		},
+		{
+			"from": "resources/testing/*.scm",
+			"to": "resources/testing"
+		},
+		{
+			"from": "resources/testing/vscodereporter/*",
+			"to": "resources/testing"
+		},
+		{
+			"from": "node_modules/web-tree-sitter/tree-sitter.wasm",
+			"to":"./dist"
+		}
+	]
+}

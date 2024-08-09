@@ -1,0 +1,27 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (C) 2022 Posit Software, PBC. All rights reserved.
+ *  Licensed under the Elastic License 2.0. See LICENSE.txt for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.positron-modal-dialog-box .labeled-text-input {
+	width: 100%;
+}
+
+.positron-modal-dialog-box .labeled-text-input label {
+	display: flex;
+	flex-direction: column;
+}
+
+.positron-modal-dialog-box .labeled-text-input .text-input {
+	margin-top: 4px;
+}
+
+.positron-modal-dialog-box .labeled-text-input span.error {
+	color: var(--vscode-errorForeground);
+	height: 1em;
+	display: block;
+}
+
+.positron-modal-dialog-box .labeled-text-input input.error {
+	border-color: var(--vscode-errorForeground);
+}

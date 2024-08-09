@@ -1,0 +1,33 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (C) 2024 Posit Software, PBC. All rights reserved.
+ *  Licensed under the Elastic License 2.0. See LICENSE.txt for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.positron-notebook-markdown-cell {
+
+	&.editor-hidden:not(:hover)
+		.positron-notebooks-cell-action-bar {
+		display: none;
+	}
+}
+
+.positron-notebook-markup-rendered {
+	padding-inline: 1rem;
+	padding-block: 0.5rem;
+
+	&:has(.empty-output-msg) {
+		border: 1px dashed var(--vscode-positronNotebook-border-color);
+		border-radius: var(--vscode-positronNotebook-cell-radius);
+	}
+
+	.empty-output-msg {
+		opacity: 0.75;
+		font-style: italic;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	img {
+		max-width: 100%;
+	}
+}

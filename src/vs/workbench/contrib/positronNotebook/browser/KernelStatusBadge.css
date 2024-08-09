@@ -1,0 +1,31 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (C) 2024 Posit Software, PBC. All rights reserved.
+ *  Licensed under the Elastic License 2.0. See LICENSE.txt for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.positron-notebook-kernel-status-badge {
+	font-size: 12px;
+	cursor: pointer;
+	color: var(--vscode-positronNotebook-deemphasized-foreground);
+
+	& span.kernel-status {
+		cursor: pointer;
+		font-weight: bold;
+	}
+
+	& .Uninitialized {
+		color: grey;
+	}
+
+	& .Connected {
+		color: forestgreen;
+	}
+
+	& .Disconnected {
+		color: red;
+	}
+
+	& .Connecting {
+		color: orange;
+	}
+}

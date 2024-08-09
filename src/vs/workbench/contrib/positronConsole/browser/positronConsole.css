@@ -1,0 +1,48 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (C) 2023 Posit Software, PBC. All rights reserved.
+ *  Licensed under the Elastic License 2.0. See LICENSE.txt for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.positron-console {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	color: var(--vscode-positronConsole-foreground);
+	background: var(--vscode-positronConsole-background);
+	--positronActionBar-border: var(--vscode-positronSideActionBar-border);
+	--positronActionBar-separator: var(--vscode-positronSideActionBar-separator);
+	--positronActionBar-background: var(--vscode-positronSideActionBar-background);
+	--positronActionBar-foreground: var(--vscode-positronSideActionBar-foreground);
+	--positronActionBar-hoverBackground: var(--vscode-positronSideActionBar-hoverBackground);
+	--positronActionBar-disabledForeground: var(--vscode-positronSideActionBar-disabledForeground);
+	--positronActionBar-textInputBackground: var(--vscode-positronSideActionBar-textInputBackground);
+	--positronActionBar-textInputBorder: var(--vscode-positronSideActionBar-textInputBorder);
+	--positronActionBar-textInputSelectionForeground: var(--vscode-positronSideActionBar-textInputSelectionForeground);
+	--positronActionBar-textInputSelectionBackground: var(--vscode-positronSideActionBar-textInputSelectionBackground);
+}
+
+/**
+ * Provide style hints for dataframes rendered directly inside the console (as
+ * tables)
+ */
+.positron-console .dataframe {
+	border: 1px solid var(--vscode-tab-border);
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-collapse: collapse;
+}
+
+.positron-console .dataframe td,
+.positron-console .dataframe th {
+	border: 1px solid var(--vscode-tab-border);
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.positron-console .action-bar .state-label {
+	text-transform: uppercase;
+	color: var(--positronActionBar-foreground);
+	font-size: 10px;
+}

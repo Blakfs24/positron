@@ -1,0 +1,17 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (C) 2024 Posit Software, PBC. All rights reserved.
+ *  Licensed under the Elastic License 2.0. See LICENSE.txt for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.positron-add-cell-buttons {
+	display: flex;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.2s;
+	gap: 8px;
+	color: inherit;
+}
+
+.positron-add-cell-buttons:hover {
+	opacity: 1;
+}
